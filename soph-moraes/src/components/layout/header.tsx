@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <section className="mx-40 pt-4">
+    <section className="mx-20 mt-8">
       <div className=" flex justify-between">
         {/* Logo */}
         <div className="w-8 h-8 bg-crimsonWine"></div>
