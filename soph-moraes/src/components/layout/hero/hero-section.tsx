@@ -7,7 +7,7 @@ import BlobAnimated from "./decorative/blobAnimated";
 const HeroSection = () => {
   return (
     <section className="relative overflow-x-clip mt-8 px-4 md:px-20 flex flex-col md:flex-row items-center md:items-start gap-8">
-      <WavesDecoration />
+      {/* <WavesDecoration /> */}
       <div className="w-full my-auto md:w-2/3 pr-0 md:pr-10">
         <h1 className="text-6xl font-bold font-serif text-crimsonWine mb-4">
           <span className="">Sophia </span>
