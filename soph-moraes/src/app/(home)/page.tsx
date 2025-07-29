@@ -2,6 +2,7 @@ import AboutSection from "@/components/layout/about/aboutSection";
 import Header from "@/components/layout/hero/header";
 import HeroSection from "@/components/layout/hero/heroSection";
 import ServicesSection from "@/components/layout/services/servicesSection";
+import ProjectsSection from "@/components/projects/projects";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       {/* Decoration para hero e about */}
       <AboutSection />
       <ServicesSection />
-      {/* <PortfolioSection /> */}
+      <ProjectsSection />
       {/* <ContactSection /> */}
     </>
   );

@@ -34,15 +34,16 @@ const HeroSection = () => {
             href="https://www.linkedin.com/in/sophia-moraes-1b94bb24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-amberOrange transition-colors"
+            className="transition-transform hover:scale-110"
           >
             <Linkedin className="w-6 h-6 text-crimsonWine" />
           </a>
+
           <a
             href="https://www.instagram.com/sofizz_14?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noreferrer"
-            className="hover:scale-110 transition-transform"
+            className="transition-transform hover:scale-110"
           >
             <Instagram className="w-6 h-6 text-crimsonWine" />
           </a>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "title": "Campanha Instagram - Outono",
+    "category": "Social Media",
+    "image": "/projects/social-outono.jpg",
+    "description": "Campanha visual com foco em engajamento para marcas de moda na estação de outono.",
+    "link": "https://example.com/projetos/social-outono"
+  },
+  {
+    "id": "2",
+    "title": "Post Série Educacional",
+    "category": "Social Media",
+    "image": "/projects/educacional.jpg",
+    "description": "Posts em carrossel para uma série educativa sobre marketing digital.",
+    "link": "https://example.com/projetos/serie-educacional"
+  },
+  {
+    "id": "3",
+    "title": "Sorteio de Dia das Mães",
+    "category": "Social Media",
+    "image": "/projects/sorteio-maes.jpg",
+    "description": "Criação de arte para sorteio comemorativo com foco em conversão e compartilhamento.",
+    "link": "https://example.com/projetos/sorteio-maes"
+  },
+  {
+    "id": "4",
+    "title": "Folder Institucional Clínica Vita",
+    "category": "Design Gráfico",
+    "image": "/projects/folder-vita.jpg",
+    "description": "Folder dobrável apresentando os serviços e estrutura da clínica médica.",
+    "link": "https://example.com/projetos/folder-vita"
+  },
+  {
+    "id": "5",
+    "title": "Cartaz Evento Cultural",
+    "category": "Design Gráfico",
+    "image": "/projects/cartaz-evento.jpg",
+    "description": "Arte visual vibrante para divulgação de evento multicultural em praça pública.",
+    "link": "https://example.com/projetos/cartaz-evento"
+  },
+  {
+    "id": "6",
+    "title": "Catálogo de Produtos Naturais",
+    "category": "Design Gráfico",
+    "image": "/projects/catalogo-naturais.jpg",
+    "description": "Design editorial para catálogo de produtos com estética clean e orgânica.",
+    "link": "https://example.com/projetos/catalogo-naturais"
+  },
+  {
+    "id": "7",
+    "title": "Identidade Visual - Café Aroma",
+    "category": "Brand & Marketing",
+    "image": "/projects/identidade-cafe.jpg",
+    "description": "Criação de identidade visual completa para cafeteria de bairro com estilo rústico e acolhedor.",
+    "link": "https://example.com/projetos/identidade-cafe"
+  },
+  {
+    "id": "8",
+    "title": "Manual da Marca - Studio Move",
+    "category": "Brand & Marketing",
+    "image": "/projects/manual-move.jpg",
+    "description": "Manual com diretrizes visuais e aplicações para garantir a consistência da marca.",
+    "link": "https://example.com/projetos/manual-move"
+  },
+  {
+    "id": "9",
+    "title": "Rebranding - Loja Fictícia",
+    "category": "Brand & Marketing",
+    "image": "/projects/rebranding-loja.jpg",
+    "description": "Redesign de marca visando reposicionamento no mercado e fortalecimento visual.",
+    "link": "https://example.com/projetos/rebranding-loja"
+  }
+]

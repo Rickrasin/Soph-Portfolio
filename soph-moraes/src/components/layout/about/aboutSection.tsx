@@ -75,7 +75,7 @@ const AboutSection = () => {
                 href="https://www.linkedin.com/in/sophia-moraes-1b94bb24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-amberOrange transition-colors"
+                className="transition-transform hover:scale-110"
               >
                 <Linkedin className="w-6 h-6 text-amberOrange" />
               </a>
