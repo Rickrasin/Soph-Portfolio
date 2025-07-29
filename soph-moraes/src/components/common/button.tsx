@@ -1,7 +1,12 @@
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "solid" | "outline";
+  variant?:
+    | "solidCrimsonWine"
+    | "solidAmberOrange"
+    | "outlineCrimsonWine"
+    | "outlineAmberOrange";
   onClick?: () => void;
+  bgColor?: string;
   className?: string;
   type?: "button" | "submit" | "reset";
   ping?: boolean;
@@ -9,19 +14,22 @@ interface ButtonProps {
 
 const Button = ({
   children,
-  variant = "solid",
+  variant = "solidCrimsonWine",
   onClick,
   className = "",
   type = "button",
   ping = false
 }: ButtonProps) => {
   const baseStyles =
-    "relative inline-flex items-center justify-center px-6 py-2 rounded-full transition font-medium text-sm md:text-base";
+    "relative inline-flex items-center justify-center px-6 py-2 rounded-md transition-colors duration-300 font-medium text-sm md:text-base cursor-pointer ";
 
   const variants = {
-    solid: "bg-crimsonWine text-white hover:bg-red-800",
-    outline:
-      "border border-crimsonWine text-crimsonWine hover:bg-crimsonWine hover:text-white"
+    solidAmberOrange: "bg-amberOrange text-white hover:bg-amber-600",
+    solidCrimsonWine: "bg-crimsonWine text-white hover:bg-red-800",
+    outlineCrimsonWine:
+      "border border-crimsonWine text-crimsonWine hover:bg-crimsonWine hover:text-white",
+    outlineAmberOrange:
+      "border border-amberOrange text-amberOrange hover:bg-amberOrange hover:text-white"
   };
 
   return (
@@ -33,7 +41,7 @@ const Button = ({
       {/* Ping background if active */}
       {ping && (
         <span
-          className="absolute inset-0 rounded-full bg-crimsonWine opacity-30 animate-ping z-0 pointer-events-none"
+          className={`absolute inset-0 rounded-full opacity-30 animate-ping z-0 pointer-events-none`}
           aria-hidden="true"
         />
       )}

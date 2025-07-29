@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import { Lora } from "next/font/google";
+import { Questrial } from "next/font/google";
+
 import "./globals.css";
 
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin"]
+});
+
+const questrial = Questrial({
+  variable: "--font-questrial",
+  subsets: ["latin"],
+  weight: ["400"]
 });
 
 export const metadata: Metadata = {
@@ -19,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable}  antialiased`}>{children}</body>
+      <body className={`${lora.variable}  ${questrial.variable}  antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

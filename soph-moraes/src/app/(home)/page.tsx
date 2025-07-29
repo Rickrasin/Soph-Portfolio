@@ -1,13 +1,18 @@
-import AboutSection from "@/components/layout/about/about";
+import AboutSection from "@/components/layout/about/aboutSection";
 import Header from "@/components/layout/hero/header";
-import HeroSection from "@/components/layout/hero/hero-section";
+import HeroSection from "@/components/layout/hero/heroSection";
+import ServicesSection from "@/components/layout/services/servicesSection";
 
 export default function Home() {
   return (
     <>
       <Header />
       <HeroSection />
+      {/* Decoration para hero e about */}
       <AboutSection />
+      <ServicesSection />
+      {/* <PortfolioSection /> */}
+      {/* <ContactSection /> */}
     </>
   );
 }

@@ -16,7 +16,12 @@ const BlobAnimated = () => {
         ease: "easeInOut"
       }}
     >
-      <Image src="/blob.svg" alt="Blob Shape" fill className="object-cover" />
+      <Image
+        src="/blob/blob.svg"
+        alt="Blob Shape"
+        fill
+        className="object-cover"
+      />
     </motion.div>
   );
 };

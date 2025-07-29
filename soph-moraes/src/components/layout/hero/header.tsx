@@ -1,23 +1,34 @@
+import Button from "@/components/common/button";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <section className="px-20 mt-8">
+    <section className="px-20 py-4 bg-crimsonWine">
       <div className=" flex justify-between">
         {/* Logo */}
-        <div className="w-8 h-8 bg-crimsonWine"></div>
+        <div className="w-8 h-8 bg-amberOrange"></div>
 
-        <nav className="flex gap-8 text-2xl">
-          <Link href={"/"}>Sobre</Link>
-          <Link href={"/"}>Serviços</Link>
-          <Link href={"/"}>Blog</Link>
-          <Link href={"/"}>Projetos</Link>
-          <Link href={"/"}>Contato</Link>
+        <nav className="flex gap-8 text-2xl text-white">
+          <Link href={"/"} className="hover:text-amberOrange   duration-300">
+            Sobre
+          </Link>
+          <Link href={"/"} className="hover:text-amberOrange   duration-300">
+            Serviços
+          </Link>
+          <Link href={"/"} className="hover:text-amberOrange   duration-300">
+            Blog
+          </Link>
+          <Link href={"/"} className="hover:text-amberOrange   duration-300">
+            Projetos
+          </Link>
+          <Link href={"/"} className="hover:text-amberOrange   duration-300">
+            Contato
+          </Link>
         </nav>
 
-        <button className="px-4 py-2 bg-amberOrange text-white rounded-lg hover:bg-amberOrange-700 transition">
+        <Button variant="solidAmberOrange" className="w-fit">
           Fale Comigo
-        </button>
+        </Button>
       </div>
     </section>
   );
