@@ -41,13 +41,21 @@ const Button = ({
       {/* Ping background if active */}
       {ping && (
         <span
-          className={`absolute inset-0 rounded-full opacity-30 animate-ping z-0 pointer-events-none`}
+          className={`absolute inset-0 rounded-full opacity-30 animate-ping z-0 pointer-events-none `}
           aria-hidden="true"
         />
       )}
 
       {/* Button text */}
-      <span className="relative z-10">{children}</span>
+      <span
+        className={`relative z-10 ${
+          variant === "solidCrimsonWine" || variant === "outlineCrimsonWine"
+            ? ""
+            : "custom-selection"
+        }`}
+      >
+        {children}
+      </span>
     </button>
   );
 };

@@ -5,6 +5,16 @@
   --foreground: #171717;
 }
 
+::selection {
+  background-color: #df8d11; /* fundo da seleção */
+  color: white; /* cor do texto selecionado */
+}
+
+.custom-selection::selection {
+  background-color: #ad333b; /* fundo da seleção */
+  color: white; /* cor do texto selecionado */
+}
+
 @theme {
   /* custom colors */
   --color-amberOrange: #df8d11;

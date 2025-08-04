@@ -25,16 +25,26 @@
       ]
     },
     "description": {
-      "type": "text"
+      "type": "blocks"
     },
     "link": {
       "type": "string"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   }

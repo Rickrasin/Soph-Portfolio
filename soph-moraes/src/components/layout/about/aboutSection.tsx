@@ -1,5 +1,4 @@
 import React from "react";
-import ProfileImage from "@/components/layout/about/profileImage";
 import { Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Button from "@/components/common/button";
@@ -17,13 +16,13 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-20 items-start">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-20 items-start ">
         {/* Título e Apresentação */}
         <div className="flex flex-col justify-center items-start gap-2">
-          <p className="text-xl md:text-3xl text-crimsonWine">
+          <p className="text-xl md:text-3xl text-crimsonWine custom-selection">
             Oi, seja bem-vindo!
           </p>
-          <h3 className="text-3xl md:text-5xl font-bold text-white uppercase">
+          <h3 className="text-3xl md:text-5xl font-bold text-white uppercase custom-selection">
             Me chamo Sophia;
           </h3>
         </div>

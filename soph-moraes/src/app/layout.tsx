@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import { Questrial } from "next/font/google";
 
-import "./globals.css";
+import "@/styles/globals.css";
+import "@/styles/swiper-custom.css";
 
 const lora = Lora({
   variable: "--font-lora",
