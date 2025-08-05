@@ -15,42 +15,29 @@ const GallerySlider = ({ images }: Props) => {
   return (
     <PhotoProvider>
       <Swiper
-        className="gallery-swiper w-full max-w-full"
-        modules={[Navigation, Pagination, Grid]}
+        modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
         spaceBetween={16}
-        slidesPerView={2}
-        grid={{
-          rows: 2,
-          fill: "row"
-        }}
         breakpoints={{
-          1024: {
-            slidesPerView: 2,
-            grid: { rows: 2 }
+          0: {
+            slidesPerView: 4
           },
           768: {
-            slidesPerView: 1,
-            grid: { rows: 2 }
-          },
-          0: {
-            slidesPerView: 1,
-            grid: { rows: 1 }
+            slidesPerView: 6
           }
         }}
       >
         {images.map((img, idx) => (
-          <SwiperSlide key={idx} className="!h-auto w-full">
+          <SwiperSlide key={idx}>
             <PhotoView src={img.url}>
-              <div className="relative w-full max-w-full aspect-square bg-gray-100 rounded-xl overflow-hidden cursor-zoom-in shadow-md hover:shadow-lg transition-all duration-300">
-                <Image
-                  src={img.url}
-                  alt={`Imagem ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Image
+                src={img.url}
+                alt={`Imagem ${idx + 1}`}
+                width={600}
+                height={400}
+                className="rounded-md object-cover w-full h-full max-h-[300px]"
+              />
             </PhotoView>
           </SwiperSlide>
         ))}

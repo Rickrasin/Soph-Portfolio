@@ -12,7 +12,7 @@ interface ProjectModalProps {
 const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh]">
+      <div className="relative w-full max-w-4xl xl:max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[95vh]">
         {/* Botão de fechar */}
         <button
           onClick={onClose}
@@ -21,22 +21,13 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           <X size={28} />
         </button>
 
-        {/* Galeria */}
-        <div className="md:w-1/2 w-full bg-gray-50 p-4 sm: md:p-6 border-b md:border-b-0 md:border-r border-gray-200 flex justify-center items-center max-h-[300px] md:max-h-none">
-          {project.gallery && project.gallery.length > 0 ? (
-            <GallerySlider images={project.gallery} />
-          ) : (
-            <p className="text-center text-gray-500">Sem imagens disponíveis</p>
-          )}
-        </div>
-
         {/* Conteúdo */}
-        <div className="md:w-1/2 w-full p-6 md:p-10 overflow-y-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-amberOrange mb-2">
+        <div className="w-full p-6 sm:p-8 md:p-10 overflow-y-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-amberOrange mb-4">
             {project.title.toUpperCase()}:
           </h2>
 
-          <p className="text-sm text-gray-600 mb-4 leading-6">
+          <p className="text-sm text-gray-600 mb-4 leading-relaxed">
             <span className="font-semibold">Projeto:</span> {project.title}
             <br />
             <span className="font-semibold">Categoria:</span>{" "}
@@ -56,6 +47,15 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             >
               <span>Acessar trabalho</span>
             </a>
+          )}
+        </div>
+
+        {/* Galeria no topo */}
+        <div className="bg-gray-50 px-4 pt-8 pb-6 sm:px-6 border-b border-gray-200 max-h-[300px] overflow-hidden flex justify-center items-center">
+          {project.gallery && project.gallery.length > 0 ? (
+            <GallerySlider images={project.gallery} />
+          ) : (
+            <p className="text-center text-gray-500">Sem imagens disponíveis</p>
           )}
         </div>
       </div>

@@ -1,8 +1,9 @@
 import { Block } from "@/types/project";
 
 // Função para renderizar texto rico (RichText)
-export const renderRichText = (content: Block[]) => {
-  return content.map((block, i) => {
+export const renderRichText = (content: Block[] | undefined) => {
+  if (!content || content.length === 0) return null;
+  return content?.map((block, i) => {
     const textContent = block.children?.map((child, j) => (
       <span key={j}>{child.text}</span>
     ));
@@ -35,4 +36,16 @@ export const renderRichText = (content: Block[]) => {
         return null;
     }
   });
+};
+
+export const extractPlainText = (blocks: Block[] | undefined): string => {
+  if (!blocks || blocks.length === 0) return "";
+
+  return blocks
+    .flatMap((block) => block.children.map((child) => child.text))
+    .join(" ");
+};
+
+export const truncateText = (text: string, maxLength: number): string => {
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 };

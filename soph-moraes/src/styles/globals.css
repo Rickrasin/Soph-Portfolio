@@ -1,49 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #fbfaf7;
-  --foreground: #171717;
+/* ======================================================
+   🌐 Variáveis Globais (modo claro por padrão)
+   ====================================================== */
+
+@theme {
+  /* Cores */
+  --color-amberOrange: #df8d11;
+  --color-crimsonWine: #ad333b;
+  --color-background: #fbfaf7;
+  --color-foreground: #171717;
+
+  /* Fontes */
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  /* Breakpoints (caso queira usar com media queries no CSS) */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
+/* ======================================================
+   ✨ Seleção de Texto
+   ====================================================== */
 ::selection {
-  background-color: #df8d11; /* fundo da seleção */
-  color: white; /* cor do texto selecionado */
+  background-color: var(--color-amberOrange);
+  color: white;
 }
 
 .custom-selection::selection {
-  background-color: #ad333b; /* fundo da seleção */
-  color: white; /* cor do texto selecionado */
+  background-color: var(--color-crimsonWine);
+  color: white;
 }
 
-@theme {
-  /* custom colors */
-  --color-amberOrange: #df8d11;
-  --color-crimsonWine: #ad333b;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --background: #fff;
-    --foreground: #0a0a0a;
-  }
-}
-
+/* ======================================================
+   🌙 Tema Escuro (você pode reativar se quiser)
+   ====================================================== */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fff;
-    --foreground: #0a0a0a;
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
   }
-} */
+}
+*/
 
+/* ======================================================
+   🧍 Estilo Base do Body
+   ====================================================== */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Questrial";
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Questrial", sans-serif;
 }

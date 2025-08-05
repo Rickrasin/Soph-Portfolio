@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "title": {
       "type": "string",
       "required": true
@@ -30,13 +35,6 @@
     "link": {
       "type": "string"
     },
-    "gallery": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -45,6 +43,13 @@
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
       ]
     }
   }

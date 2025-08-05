@@ -16,10 +16,11 @@ export interface ImageType {
 
 export interface Project {
   id: number;
+  slug: string;
   title: string;
   category: string;
-  image?: ImageType | null;
+  image?: ImageType;
   gallery?: ImageType[];
-  description: Block[];
-  link: string;
+  description?: Block[];
+  link?: string;
 }
