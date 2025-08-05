@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export async function generateStaticParams() {
-  const projects = await getAllProjects();
+  const projects = (await getAllProjects()) || [];
   return projects.map((project) => ({
     slug: project.slug
   }));
@@ -81,10 +81,9 @@ export default async function ProjectPage(props: PageProps) {
       {project.gallery && project.gallery.length > 0 && (
         <section className="px-4 md:px-20 pb-28">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-semibold mb-6">Galeria de imagens</h2>
-
+            a<h2 className="text-2xl font-semibold mb-6">Galeria de imagens</h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-              {project.gallery.map((img) => (
+              {project.gallery?.map((img) => (
                 <div
                   key={img.id}
                   className="relative w-full aspect-[4/3] rounded-md overflow-hidden shadow group border cursor-pointer"
