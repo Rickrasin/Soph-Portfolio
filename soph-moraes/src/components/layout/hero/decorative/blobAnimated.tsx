@@ -20,6 +20,7 @@ const BlobAnimated = () => {
         src="/blob/blob.svg"
         alt="Blob Shape"
         fill
+        unoptimized
         className="object-cover"
       />
     </motion.div>

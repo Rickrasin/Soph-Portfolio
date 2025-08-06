@@ -12,6 +12,7 @@ const AboutSection = () => {
           alt=""
           width={800}
           height={800}
+          unoptimized
           className="select-none pointer-events-none"
         />
       </div>

@@ -64,6 +64,7 @@ const HeroSection = () => {
           alt=""
           width={1920}
           height={200}
+          unoptimized
           className="w-full max-w-none"
         />
       </div>

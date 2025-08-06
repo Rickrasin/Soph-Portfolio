@@ -21,6 +21,7 @@ export const WavesDecoration = () => {
         <Image
           src="/decorations/wave-top-left.svg"
           alt=""
+          unoptimized
           width={600}
           height={600}
           className=""
@@ -41,6 +42,7 @@ export const WavesDecoration = () => {
         <Image
           src="/decorations/wave-bottom-right.svg"
           alt=""
+          unoptimized
           width={800}
           height={800}
           className=""

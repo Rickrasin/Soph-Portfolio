@@ -15,6 +15,7 @@ const HeroContainer = () => {
           src="/Star/starburst.svg"
           alt="Estrela decorativa"
           fill
+          unoptimized
           className="object-contain"
         />
       </motion.div>
@@ -24,6 +25,7 @@ const HeroContainer = () => {
         src="/soph.png"
         alt="Hero Image"
         fill
+        unoptimized
         className="absolute object-contain object-bottom z-10"
       />
     </div>

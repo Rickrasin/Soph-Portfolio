@@ -31,6 +31,7 @@ const ServicesSection = () => {
         <Image
           src="/images/Wave/split-wave.svg"
           alt=""
+          unoptimized
           width={2100}
           height={100}
           className="w-full max-w-none rotate-180 scale-x-[-1]"

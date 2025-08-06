@@ -70,10 +70,13 @@ const ProjectsSection = ({ projects }: Props) => {
                     src={project.image.url}
                     alt={project.title}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                 ) : (
-                  <ImageIcon className="w-10 h-10 text-gray-400 absolute inset-0 m-auto" />
+                  <ImageIcon
+                    className="w-10 h-10 text-gray-400 absolute inset-0 m-auto"
+                  />
                 )}
               </div>
 

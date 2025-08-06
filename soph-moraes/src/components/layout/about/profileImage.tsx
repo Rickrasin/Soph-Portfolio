@@ -38,6 +38,7 @@ const ProfileImage = () => {
               alt={`blob-${index}`}
               width={800}
               height={800}
+              unoptimized
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
           </motion.div>
@@ -50,6 +51,7 @@ const ProfileImage = () => {
           src="/soph-avatar.png"
           alt="avatar"
           fill
+          unoptimized
           className="object-cover rounded-full"
         />
       </div>
