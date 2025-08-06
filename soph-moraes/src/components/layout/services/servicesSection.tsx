@@ -29,7 +29,7 @@ const ServicesSection = () => {
       {/* Wave decorativo invertido */}
       <div className="absolute -top-1 left-0 w-full z-0 pointer-events-none select-none">
         <Image
-          src="/Wave/split-Wave.svg"
+          src="/images/Wave/split-wave.svg"
           alt=""
           width={2100}
           height={100}

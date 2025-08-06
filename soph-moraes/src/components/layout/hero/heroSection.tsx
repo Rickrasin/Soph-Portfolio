@@ -60,7 +60,7 @@ const HeroSection = () => {
 
       <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-[10]">
         <Image
-          src="/Wave/split-Wave.svg"
+          src="/images/Wave/split-wave.svg"
           alt=""
           width={1920}
           height={200}

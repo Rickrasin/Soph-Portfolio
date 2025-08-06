@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cms.seudominio.com",
+        hostname: "soph-portfolio.onrender.com",
         port: "",
         pathname: "/**"
       }
