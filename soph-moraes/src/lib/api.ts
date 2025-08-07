@@ -38,7 +38,7 @@ export async function getAllProjects(): Promise<Project[]> {
         ? {
             id: item.image.id,
             documentId: item.image.documentId.toString(),
-            url: strapiUrl + item.image.url
+            url: item.image.url
           }
         : undefined,
       gallery: item.gallery?.map((img: ImageType) => img) ?? [],
@@ -87,14 +87,14 @@ export async function getProjectBySlug(
         ? {
             id: item.image.id,
             documentId: item.image.documentId.toString(),
-            url: strapiUrl + item.image.url
+            url: item.image.url
           }
         : undefined,
       gallery:
         item.gallery?.map((img: ImageType) => ({
           id: img.id,
           documentId: img.documentId,
-          url: strapiUrl + img.url
+          url: img.url
         })) ?? [],
       link: item.link
     };
