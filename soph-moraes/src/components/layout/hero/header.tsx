@@ -1,36 +1,31 @@
 import Button from "@/components/common/button";
+import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <section className="px-20 py-4 bg-crimsonWine">
-      <div className=" flex justify-between">
+    <header className="sticky top-0 z-50 bg-crimsonWine shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
         {/* Logo */}
-        <div className="w-8 h-8 bg-amberOrange"></div>
+        <Link href="/" className="flex items-center space-x-3 md:space-x-4">
+          <Image
+            src="/sophia-moraes-logomarca.svg"
+            width={80}
+            height={80}
+            alt="logomarca"
+            className="w-20 h-20 md:w-24 md:h-24"
+          />
+        </Link>
 
-        <nav className="flex gap-8 text-2xl text-white">
-          <Link href={"/"} className="hover:text-amberOrange   duration-300">
-            Sobre
-          </Link>
-          <Link href={"/"} className="hover:text-amberOrange   duration-300">
-            Serviços
-          </Link>
-          <Link href={"/"} className="hover:text-amberOrange   duration-300">
-            Blog
-          </Link>
-          <Link href={"/"} className="hover:text-amberOrange   duration-300">
-            Projetos
-          </Link>
-          <Link href={"/"} className="hover:text-amberOrange   duration-300">
-            Contato
-          </Link>
-        </nav>
-
-        <Button variant="solidAmberOrange" className="w-fit">
+        {/* Call to action */}
+        <Button
+          variant="solidAmberOrange"
+          className="px-4 py-2 text-sm sm:text-base md:px-6 md:py-2 md:text-lg"
+        >
           Fale Comigo
         </Button>
       </div>
-    </section>
+    </header>
   );
 };
 

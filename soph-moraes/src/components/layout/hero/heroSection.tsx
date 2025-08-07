@@ -4,9 +4,11 @@ import HeroContainer from "./HeroContainer";
 import Image from "next/image";
 import { Instagram, Linkedin } from "lucide-react";
 
+// TODO: BOTÕES ESTÂO FICANDO COM DUAS LINHAS NO 796px de largura
+
 const HeroSection = () => {
   return (
-    <section className="relative overflow-x-clip mt-8 px-4 md:px-20 flex flex-col md:flex-row items-center md:items-start gap-8">
+    <section className="relative overflow-x-clip mt-8 px-4 md:px-20 flex flex-col md:flex-row items-center md:items-start min-h-[calc(100vh-130px)] gap-8">
       <div className="w-full my-auto  md:w-2/3 pr-0 md:pr-10">
         <h1 className="text-6xl font-bold  text-amberOrange mb-4">
           <span className="">Sophia </span>
@@ -50,7 +52,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <HeroContainer />
+      <div className="relative w-full md:w-1/3 mt-auto flex justify-center items-end h-full overflow-visible">
+        <HeroContainer />
+      </div>
 
       {/* Decorations */}
 
@@ -58,7 +62,7 @@ const HeroSection = () => {
         ↓
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-[10]">
+      <div className="absolute -bottom-1 left-0 w-full overflow-hidden pointer-events-none select-none z-[10]">
         <Image
           src="/images/Wave/split-wave.svg"
           alt=""
