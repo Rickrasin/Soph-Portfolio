@@ -4,6 +4,8 @@ import HeroSection from "@/components/layout/hero/heroSection";
 import ServicesSection from "@/components/layout/services/servicesSection";
 import ProjectsSection from "@/components/layout/projects/projects";
 import { getAllProjects } from "@/lib/api";
+import ContactSection from "@/components/layout/contact/contactSection";
+import FooterSection from "@/components/layout/footer/footerSection";
 
 export default async function HomePage() {
   const projects = await getAllProjects();
@@ -16,7 +18,8 @@ export default async function HomePage() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection projects={projects} />
-      {/* <ContactSection /> */}
+      <ContactSection />
+      <FooterSection />
     </>
   );
 }
