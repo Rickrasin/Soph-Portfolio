@@ -2,12 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { getHomeHero } from "@/lib/strapi-hero";
-
-
-const HeroContainer = async () => {
-  const heroData = await getHomeHero();
-  console.log("Hero Data:", heroData);
+const HeroContainer = () => {
   return (
     <div className="relative w-full h-full flex justify-center items-end">
       {/* Spinning starburst decoration */}
