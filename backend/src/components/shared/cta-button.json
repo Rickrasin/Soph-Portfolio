@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_cta_buttons",
+  "info": {
+    "displayName": "cta-button"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "solidAmberOrange",
+        "solidCrimsonWine",
+        "outlineCrimsonWine",
+        "outlineAmberOrange"
+      ]
+    },
+    "isExternal": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}

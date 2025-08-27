@@ -376,7 +376,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
-    displayName: 'HomePage';
+    displayName: 'Hero Section';
     pluralName: 'home-pages';
     singularName: 'home-page';
   };
@@ -387,15 +387,31 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    primaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
+    quote: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 96;
+      }>;
+    secondaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
+    socialLinks: Schema.Attribute.Component<'shared.social-link', true>;
+    subtitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 96;
+      }>;
+    Title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

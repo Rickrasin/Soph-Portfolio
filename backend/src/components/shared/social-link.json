@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "social-link"
+  },
+  "options": {},
+  "attributes": {
+    "provider": {
+      "type": "enumeration",
+      "enum": [
+        "linkedin",
+        "instagram",
+        "behance",
+        "dribbble"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
