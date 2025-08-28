@@ -25,7 +25,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative bg-[#fdf6ec] pt-52 pb-32 px-6 md:px-20 text-crimsonWine overflow-x-clip">
+    <section className="relative pt-52 pb-32 px-6 md:px-20 text-crimsonWine overflow-x-clip">
       {/* Wave decorativo invertido */}
       <div className="absolute -top-1 left-0 w-full z-0 pointer-events-none select-none">
         <Image
