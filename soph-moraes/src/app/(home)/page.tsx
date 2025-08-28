@@ -6,14 +6,27 @@ import ProjectsSection from "@/components/layout/projects/projects";
 import { getAllProjects } from "@/lib/api";
 import ContactSection from "@/components/layout/contact/contactSection";
 import FooterSection from "@/components/layout/footer/footerSection";
+import { getHomeHero } from "@/lib/strapi-hero";
 
 export default async function HomePage() {
   const projects = await getAllProjects();
+  const hero = await getHomeHero();
+
+
+  // Fallback simples se não tiver conteúdo publicado
+  if (!hero) {
+    return (
+      <main className="px-4 md:px-20 py-16">
+        <h1 className="text-3xl font-bold">Conteúdo em breve</h1>
+        <p className="text-neutral-600 mt-2">Publique o Single Type “home-page” no Strapi.</p>
+      </main>
+    );
+  }
 
   return (
     <>
       <Header />
-      <HeroSection />
+      <HeroSection hero={hero} />
       {/* Decoration para hero e about */}
       <AboutSection />
       <ServicesSection />

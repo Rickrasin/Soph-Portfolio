@@ -1,3 +1,5 @@
+import { ButtonVariant } from "@/components/common/button";
+
 // lib/strapi-home.ts
 export type SocialLink = {
     id: number;
@@ -9,7 +11,7 @@ export type CtaButton = {
     id: number;
     label: string;
     href?: string | null;
-    variant?: string | null;
+    variant: ButtonVariant
     isExternal?: boolean | null;
 };
 
@@ -87,7 +89,7 @@ export async function getHomeHero(): Promise<HomeHero | null> {
         : null;
 
     const socialLinks: SocialLink[] = Array.isArray(raw.socialLinks)
-        ? raw.socialLinks.map((s: any) => ({
+        ? raw.socialLinks.map((s: SocialLink) => ({
             id: s.id,
             provider: s.provider,
             url: s.url,

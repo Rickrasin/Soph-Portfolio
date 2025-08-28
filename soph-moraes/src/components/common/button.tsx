@@ -1,10 +1,12 @@
+export type ButtonVariant =
+  | "solidCrimsonWine"
+  | "solidAmberOrange"
+  | "outlineCrimsonWine"
+  | "outlineAmberOrange";
+
 interface ButtonProps {
   children: React.ReactNode;
-  variant?:
-    | "solidCrimsonWine"
-    | "solidAmberOrange"
-    | "outlineCrimsonWine"
-    | "outlineAmberOrange";
+  variant?: ButtonVariant;
   onClick?: () => void;
   bgColor?: string;
   className?: string;
@@ -48,11 +50,10 @@ const Button = ({
 
       {/* Button text */}
       <span
-        className={`relative z-10 ${
-          variant === "solidCrimsonWine" || variant === "outlineCrimsonWine"
-            ? ""
-            : "custom-selection"
-        }`}
+        className={`relative z-10 ${variant === "solidCrimsonWine" || variant === "outlineCrimsonWine"
+          ? ""
+          : "custom-selection"
+          }`}
       >
         {children}
       </span>

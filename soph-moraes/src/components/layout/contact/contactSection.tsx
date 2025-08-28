@@ -5,9 +5,6 @@ import {
   Mail,
   User,
   MessageCircle,
-  Instagram,
-  Linkedin,
-  Link
 } from "lucide-react";
 
 const ContactSection = () => {
