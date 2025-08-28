@@ -30,7 +30,7 @@ const ProjectsSection = ({ projects }: Props) => {
   const visibleProjects = showAll ? filtered : filtered.slice(0, 9);
 
   return (
-    <section className="bg-cream py-24 px-4 sm:px-6 md:px-12 lg:px-20 text-crimsonWine">
+    <section className="bg-cream py-24 px-4 sm:px-6 md:px-12 lg:px-20 text-crimsonWine" id="portfolio">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
         Projetos
       </h2>
@@ -44,11 +44,10 @@ const ProjectsSection = ({ projects }: Props) => {
               setActive(cat);
               setShowAll(false);
             }}
-            className={`px-4 py-2 text-sm sm:text-base rounded-full border transition-all duration-200 hover:scale-105 ${
-              active === cat
+            className={`px-4 py-2 text-sm sm:text-base rounded-full border transition-all duration-200 hover:scale-105 ${active === cat
                 ? "bg-amberOrange text-white border-amberOrange"
                 : "border-crimsonWine text-crimsonWine"
-            }`}
+              }`}
           >
             {cat}
           </button>
