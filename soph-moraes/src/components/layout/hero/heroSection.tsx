@@ -12,7 +12,7 @@ const HeroSection = ({ hero }: Props) => (
     <div className="w-full my-auto md:w-2/3 pr-0 md:pr-10">
       <h1 className="text-6xl font-bold text-amberOrange mb-4">
         <span>{(hero.title || "Sophia Moraes").split(" ")[0]} </span>
-        <span>{(hero.title || "Sophia Moraes").split(" ").slice(1).join(" ")}</span>
+        <span>{("Sophia Moraes").split(" ").slice(1).join(" ")}</span>
       </h1>
 
       {hero.subtitle && <h2 className="text-xl text-crimsonWine mb-4">{hero.subtitle}</h2>}
