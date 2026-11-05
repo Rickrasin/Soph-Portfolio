@@ -100,6 +100,12 @@ const ProjectsSection = ({ projects }: Props) => {
         ))}
       </div>
 
+      {projects.length === 0 && (
+        <p className="text-center text-crimsonWine/70">
+          Os projetos estão temporariamente indisponíveis. Volte em breve para conferir o portfólio.
+        </p>
+      )}
+
       {/* Botão "Exibir mais" */}
       {!showAll && filtered.length > 9 && (
         <div className="mt-12 flex justify-center">
