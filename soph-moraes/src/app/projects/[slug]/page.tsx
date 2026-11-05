@@ -1,4 +1,4 @@
-import { getAllProjects, getProjectBySlug } from "@/lib/api";
+import { getProjectBySlug } from "@/lib/api";
 import { notFound } from "next/navigation";
 import { renderRichText } from "@/utils/richText";
 import Image from "next/image";
@@ -6,11 +6,11 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export async function generateStaticParams() {
-  const projects = (await getAllProjects()) || [];
-  return projects.map((project) => ({
-    slug: project.slug
-  }));
+  // Project pages are rendered on demand so Strapi availability cannot block deploys.
+  return [];
 }
+
+export const dynamicParams = true;
 
 interface PageProps {
   params: Promise<{ slug: string }>;

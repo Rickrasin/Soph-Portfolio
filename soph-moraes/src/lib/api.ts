@@ -4,17 +4,16 @@ import { ImageType, Project } from "@/types/project";
 export async function getAllProjects(): Promise<Project[]> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPIURL;
   if (!strapiUrl) {
-    throw new Error(
-      "NEXT_PUBLIC_STRAPIURL is not defined in environment variables."
-    );
+    console.error("NEXT_PUBLIC_STRAPIURL is not defined in environment variables.");
+    return [];
   }
 
   try {
     const res = await fetch(
       `${strapiUrl}/api/projects?populate[image][fields][0]=url&populate[gallery][fields][0]=url`,
       {
-        cache: "force-cache",
-        next: { revalidate: 60 * 60 * 24 }
+        cache: "no-store",
+        signal: AbortSignal.timeout(8000)
       }
     );
 
@@ -56,15 +55,14 @@ export async function getProjectBySlug(
 ): Promise<Project | undefined> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPIURL;
   if (!strapiUrl) {
-    throw new Error(
-      "NEXT_PUBLIC_STRAPIURL is not defined in environment variables."
-    );
+    console.error("NEXT_PUBLIC_STRAPIURL is not defined in environment variables.");
+    return undefined;
   }
 
   try {
     const res = await fetch(
       `${strapiUrl}/api/projects?filters[slug][$eq]=${slug}&populate[image][fields][0]=url&populate[gallery][fields][0]=url`,
-      { cache: "force-cache" }
+      { cache: "no-store", signal: AbortSignal.timeout(8000) }
     );
     if (!res.ok) {
       console.error(

@@ -7,6 +7,8 @@ import { getAllProjects } from "@/lib/api";
 import ContactSection from "@/components/layout/contact/contactSection";
 import FooterSection from "@/components/layout/footer/footerSection";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const projects = await getAllProjects();
 
